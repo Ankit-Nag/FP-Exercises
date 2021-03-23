@@ -141,5 +141,5 @@ const oneFunc = (...fns) =>{
 }
 
 const incrementThensub3 = oneFunc(increment,sub3);
-console.log(incrementThensub2(5));
+console.log(incrementThensub3(5));
 console.log(oneFunc(decrement,square,increment)(5));
