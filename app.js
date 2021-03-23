@@ -134,11 +134,12 @@ console.log(composition("This is a composition fn: ", "6", "Ankit"));
 const increment = (num) => num+1;
 const decrement = (num) => num-1;
 const square = (num) => num*num;
+const sub3 = (num) => num-3; 
 
 const oneFunc = (...fns) =>{
     return fns.reduce((acc,curr)=>(num)=>curr(acc(num)));
 }
 
-const incrementThensub2 = oneFunc(increment,decrement);
+const incrementThensub3 = oneFunc(increment,sub3);
 console.log(incrementThensub2(5));
 console.log(oneFunc(decrement,square,increment)(5));
